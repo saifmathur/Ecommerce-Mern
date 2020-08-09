@@ -10,32 +10,33 @@
 </head>
 <body class="bg-light vh-100">
     <div class="w-100" style="width: 100%;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
-            <a to="/" class="navbar-brand" >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 scrolling-navbar">
+            <a href="index.html" class="navbar-brand" >
                 <img src="../static/hanger.jpg" class="logo-class rounded-circle z-depth-2 bg-dark"  alt="100x100" />
                 <span class="lead ml-1"> WhatToWear</span>
             </a>
             <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Links -->
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-link">
                         <a class="nav-link mr-2" href="index.html">
                             <i class = 'fas fa-shopping-cart'></i> Cart
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-link">
                         <a class="nav-link mr-2" href="index.html">
                             <i class = 'fas fa-home'></i> Home
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-link">
                         <a class="nav-link mr-2" href="signup.html">
                             <i class='fas fa-edit'></i> Sign Up
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-link waves-effect">
                         <a class="nav-link" href="signin.html">
                             <i class='fas fa-sign-in-alt'></i> Sign In
                         </a>
@@ -44,6 +45,112 @@
                 </ul>
             </div>
         </nav>
+        <!-- Carousal Wrapper -->
+        <div class='carousel slide carousel-fade' id="carousel-example-1z" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+            </ol>
+            <!-- Indicators -->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <!--First slide-->
+                <div class="carousel-item active">
+                    <div class="view pt-5" style="background-image: url('../static/jeans.jpg'); background-repeat: no-repeat; background-size:cover; max-width: 100%; max-height: 100%; opacity: 0.9;">
+                        <!-- Mask & flexbox options-->
+                        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+                         <!-- Content -->
+                         <div class="text-center text-black mx-5 mt-3 wow fadeIn">
+                            <h1 class="mb-4 display-4">
+                                <strong>Shop your favourite trendy styles</strong>
+                            </h1>
+        
+                            <p class="lead mt-2">
+                                <strong>Some content here</strong>
+                            </p>
+        
+                            <p class="mb-5 pb-5 mt-4 lead d-none d-md-block">
+                                <strong>Clothing something something</strong>
+                            </p>
+        
+    
+                        </div>
+                        <!-- Content -->
+                        </div>
+                        <!-- Mask & flexbox options-->
+                    </div>
+                </div>
+                <!--/First slide-->
+        
+                <!--Second slide-->
+                <div class="carousel-item">
+                    <div class="view pt-5" style="background-image: url('../static/gray-Cap.jpg'); background-repeat: no-repeat; background-size: cover;  ">
+        
+                        <!-- Mask & flexbox options-->
+                        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+        
+                         <!-- Content -->
+                         <div class="text-center text-light mx-5 mt-3 wow fadeIn">
+                            <h1 class="mb-4 display-4">
+                                <strong>Shop your favourite trendy styles</strong>
+                            </h1>
+        
+                            <p class="lead mt-2">
+                                <strong>Some content here</strong>
+                            </p>
+        
+                            <p class="mb-5 pb-5 mt-4 lead d-none d-md-block">
+                                <strong>Clothing something something</strong>
+                            </p>
+        
+    
+                        </div>
+                        <!-- Content -->
+        
+                        </div>
+                        <!-- Mask & flexbox options-->
+        
+                    </div>
+                </div>
+                <!--/Second slide-->
+        
+                <!--Third slide-->
+                <div class="carousel-item">
+                    <div class="view pt-5" style="background-image: url('../static/gray-hanger.jpg'); background-repeat: no-repeat; background-size: cover; opacity: 0.9;">
+        
+                        <!-- Mask & flexbox options-->
+                        <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+        
+                            <!-- Content -->
+                            <div class="text-center text-white mx-5 mt-3 wow fadeIn">
+                                <h1 class="mb-4 display-4">
+                                    <strong>Shop your favourite trendy styles</strong>
+                                </h1>
+            
+                                <p class="lead mt-2">
+                                    <strong>Some content here</strong>
+                                </p>
+            
+                                <p class="mb-5 pb-5 mt-4 lead d-none d-md-block">
+                                    <strong>Clothing something something</strong>
+                                </p>
+            
+        
+                            </div>
+                            <!-- Content -->
+        
+                        </div>
+                        <!-- Mask & flexbox options-->
+        
+                    </div>
+                </div>
+                <!--/Third slide-->
+            </div>
+            <!--/.Slides-->
+
+        </div>
         <aside>
             Shopping Categories
         </aside>
@@ -60,7 +167,7 @@
                 </ul>
             </div>
         </main>
-        <footer class="page-footer font-small blue pt-4 fixed-bottom pb-4">
+        <footer class="page-footer font-small blue pt-1 fixed-bottom">
             <div class="footer-copyright text-center py-3">
                 <p class="lead"><b>&copy; 2020 WhatToWear</b></p>
             </div>
