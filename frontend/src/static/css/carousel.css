@@ -1,0 +1,21 @@
+.carousel-div{
+    background-image: url('../jeans.jpg'); 
+    background-repeat: no-repeat;
+    background-size:cover;
+    max-width: 100%; 
+    max-height: 100%; 
+    opacity: 0.9;
+}
+
+.carousel-grey{
+    background-image: url('../gray-Cap.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-hanger{
+    background-image: url('../gray-hanger.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
