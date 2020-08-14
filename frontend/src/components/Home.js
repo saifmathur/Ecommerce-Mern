@@ -2,10 +2,11 @@ import React from 'react'
 import '../App.css';
 import '../static/css/carousel.css'
 import '../static/css/logo.css'
+import data from '../data'
 
 import { Link } from 'react-router-dom'
 
-const Home = ()=>{
+const Home = (props)=>{
     return(
         <div className='bg-light vh-100'>
         <div className="w-100" style={{ width: "100%" }}>
@@ -156,7 +157,9 @@ const Home = ()=>{
                             <li className="nav-item">
                                 <Link className="nav-link" to="#">Outwears</Link>
                             </li>
-
+                            <li className="nav-item">
+                                <Link className="nav-link" to="#">Shoes</Link>
+                            </li>
                         </ul>
                 
 
@@ -171,168 +174,56 @@ const Home = ()=>{
                 </nav>
                 
                 <section className="text-center mb-4 lead ">
-                   
+                
                     <div className="row wow fadeIn">
-                   
-                        <div className="col-lg-3 col-md-6 mb-4">
-                   
+                    {
+                        data.products.map(product=> 
+                        
+                        <div className="col-lg-3 col-md-6 mb-3">
+                        
                             <div className="card">
-                   
-                                <div className="view overlay">
-                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" className="card-img-top" alt="" />
-                                    <Link>
-                                    <div className="mask rgba-white-slight"></div>
-                                    </Link>
-                                </div>
-                   
-
-                   
-                                <div className="card-body text-center">
-                   
-                                    <Link to="" className="grey-text">
-                                    <small className="text-muted nav-link text-dark">Shirt</small>
-                                    </Link>
-                                    <h5>
-                                    <strong>
-                                        <Link to="" className="card-title nav-link text-primary">Denim shirt
-                                        <span className="badge badge-secondary lead ml-2">New!</span>
+                                    {/* "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" */}
+                                    <div className="view overlay">
+                                        <img src={product.image} className="card-img-top" alt="" />
+                                        <Link>
+                                            <div className="mask rgba-white-slight"></div>
                                         </Link>
-                                    </strong>
-                                    </h5>
-
-                                    <h4 className="font-weight-bold blue-text lead">
-                                        &#8377; 2400
-                                        </h4>
-
-                                </div>
-                            </div>
-                   
-
-                        </div>
-                   
-
-                   
-                        <div className="col-lg-3 col-md-6 mb-4">
-                   
-                            <div className="card">
-                   
-                                <div className="view overlay">
-                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg" className="card-img-top" alt="" />
-                                    <Link>
-                                        <div className="mask rgba-white-slight"></div>
-                                    </Link>
-                                </div>
-                   
-
-                   
-                                <div className="card-body text-center">
-                   
-                                    <Link to="" className="grey-text">
-                                        <small className="text-muted nav-link text-dark">Sports wear</small>
-                                    </Link>
-                                    <h5>
+                                    </div>
+                                    <div className="card-body text-center">
+                    
+                                        <Link to="" className="grey-text">
+                                            <small className="text-muted nav-link text-dark">{product.category}</small>
+                                        </Link>
+                                        <Link className='text-dark nav-link '>
+                                            <span className='nav-link'>{product.brand}</span>
+                                        </Link>
+                                        <h5>
                                         <strong>
-                                            <Link to="" className="card-title nav-link text-primary">Red Sweatshirt</Link>
+                                            <Link to="" className="card-title nav-link text-primary">{product.title}
+                                                {/* <span className="badge badge-secondary lead ml-2">New!</span> */}
+                                            </Link>
+                                            
                                         </strong>
-                                    </h5>
+                                        </h5>
 
-                                    <h4 className="font-weight-bold blue-text lead">
-                                        &#8377; 1999
-                                        </h4>
+                                        <h4 className="font-weight-bold blue-text lead">
+                                            &#8377; {product.price}
+                                            </h4>
 
-                                </div>
-                   
-
+                                    </div>
+                                
+                                
                             </div>
-                   
+                        
+                        
 
                         </div>
-                   
-
-                   
-                        <div className="col-lg-3 col-md-6 mb-4">
-                   
-                            <div className="card">
-                   
-                                <div className="view overlay">
-                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg" className="card-img-top" alt="" />
-                                    <Link>
-                                    <div className="mask rgba-white-slight"></div>
-                                    </Link>
-                                </div>
-                   
-
-                   
-                                <div className="card-body text-center">
-                   
-                                    <Link to="" className="grey-text">
-                                        <small className="text-muted nav-link text-dark">Sport wear</small>
-                                    </Link>
-                                    <span className="badge badge-warning lead">Bestseller!</span>
-                                    <h5>
-                                    <strong>
-                                        <Link to="" className="card-title nav-link text-primary">Grey Sweatshirt
-                                        </Link>
-                                    </strong>
-                                    </h5>
-
-                                    <h4 className="font-weight-bold blue-text lead">
-                                        &#8377; 4199
-                                        </h4>
-
-                                </div>
-                   
-
-                            </div>
-                   
-
-                        </div>
-                   
-
-                   
-                        <div className="col-lg-3 col-md-6 mb-4">
-                   
-                   
-                            <div className="card">
-
-                   
-                                <div className="view overlay">
-                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg" className="card-img-top" alt="" />
-                                    <Link>
-                                    <div className="mask rgba-white-slight"></div>
-                                    </Link>
-                                </div>
-                   
-
-                   
-                                <div className="card-body text-center">
-                   
-                                    <Link to="" className="grey-text">
-                                        <small className="text-muted nav-link text-dark">Outwear</small>
-                                    </Link>
-                                    <h5>
-                                    <strong>
-                                        <Link to="" className="card-title nav-link text-primary">Black Denim jacket</Link>
-                                    </strong>
-                                    </h5>
-
-                                    <h4 className="font-weight-bold blue-text lead">
-                                        &#8377; 999
-                                        </h4>
-
-                                </div>
-                   
-
-                            </div>
-                   
-
-                        </div>
-                   
-
-                        </div>
-                   
-
-                    </section>
+                        
+                        )} 
+                    </div>
+                 
+                  
+                </section>
                    
             </div>
         </main>
