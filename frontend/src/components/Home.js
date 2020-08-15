@@ -184,8 +184,9 @@ const Home = (props)=>{
                             <div className="card">
                                     {/* "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" */}
                                     <div className="view overlay">
-                                        <img src={product.image} className="card-img-top" alt="" />
-                                        <Link>
+                                        <Link to={'/product/' + product._id} >
+                                            <img src={product.image} className="card-img-top" alt="" />
+                                        
                                             <div className="mask rgba-white-slight"></div>
                                         </Link>
                                     </div>
@@ -199,7 +200,7 @@ const Home = (props)=>{
                                         </Link>
                                         <h5>
                                         <strong>
-                                            <Link to="" className="card-title nav-link text-primary">{product.title}
+                                            <Link to={ "/product/" + product._id } className="card-title nav-link text-primary">{product.title}
                                                 {/* <span className="badge badge-secondary lead ml-2">New!</span> */}
                                             </Link>
                                             
