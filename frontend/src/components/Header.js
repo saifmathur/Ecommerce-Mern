@@ -17,7 +17,7 @@ const Header = () => {
                 <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li className="nav-link">
                         <Link className="nav-link mr-2" to="index.html">
-                            <i class = 'fas fa-shopping-cart'></i> Cart
+                            <i class = 'fa fa-shopping-bag'></i> Bag
                         </Link>
                     </li>
                     <li className="nav-link">
