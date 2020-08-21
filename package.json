@@ -1,0 +1,29 @@
+{
+  "name": "ecomm-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifmathur/Ecommerce-Mern.git"
+  },
+  "author": "saif mathur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifmathur/Ecommerce-Mern/issues"
+  },
+  "homepage": "https://github.com/saifmathur/Ecommerce-Mern#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "nodemon": "^2.0.4"
+  }
+}
