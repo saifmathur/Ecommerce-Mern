@@ -16,16 +16,17 @@ const ProductPage = (props) => {
             <div className='container'>
                 
                 <div className='mt-5 shadow-lg p-3 mb-5 bg-white rounded'>
-                <h1 className='display-4'>{product.brand}</h1>
-                <span><small className='lead ml-1'> {product.title}</small></span>
-                    <div className='text-center lead'>
-                        <h3 className='font-weight-light'> &#8377;{product.price}</h3>
+                    <h1 className='display-4'>{product.brand}</h1>
+                    <span><small className='lead ml-1'> {product.title}</small></span>                     
+                    <div className='text-center lead row'>
+                        <img src={product.image} alt="100x100"/>
+                        <ul className='list-group list-group-flush'>
+                            <li className='list-group-item'><h1 className='font-weight-light'>&#8377;{product.price}</h1>
+                            <small className='text-muted ml-5'>*Inclusive of all taxes</small></li>
+                            {/* button for add to cart and other things */}
+                            
+                        </ul>   
                    </div>
-                   <div className='text-center ml-2 mt-0'>
-                        <small className='text-muted ml-5'>Inclusive of all taxes</small>
-                        
-                   </div>
-                    <img src={product.image} alt="100x100"/> 
                 </div>
                
             </div>
