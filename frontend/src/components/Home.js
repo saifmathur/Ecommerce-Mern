@@ -1,14 +1,35 @@
-import React from 'react'
+// import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import '../App.css';
 import '../static/css/carousel.css'
 import '../static/css/logo.css'
-import data from '../data'
-
+//import data from '../data'
+//import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { listProducts } from '../actions/productActions'
 
 const Home = (props)=>{
-    return(
-        <div className='bg-light vh-100'>
+
+    //const [products, setProduct] = useState([]);
+    const productList = useSelector(state => state.productList)
+    const { products, loading , error } = productList
+    const dispatch = useDispatch()
+
+    //to fetch data
+    useEffect(()=>{
+        dispatch(listProducts());
+        // const fetchData = async ()=>{
+        //     const { data } = await axios.get('/api/products')
+        //     setProduct(data)
+        // }
+        // fetchData()
+        return ()=>{
+            //
+        }
+    },[]);
+
+    return <div className='bg-light vh-100'>
         <div className="w-100" style={{ width: "100%" }}>
         
         
@@ -172,14 +193,19 @@ const Home = (props)=>{
                 
 
                 </nav>
+                    
                 
                 <section className="text-center mb-4 lead ">
                 
                     <div className="row wow fadeIn">
+                    {/* {loading} ? <div>loading...</div> : 
+                    {error} ? <div>{error}</div>:        */}
                     {
-                        data.products.map(product=> 
-                        
-                        <div className="col-lg-3 col-md-6 mb-3">
+                        {loading}?<div>loading</div>:
+                        {error}?<div>error</div>:
+                        //data.products.map(product=> 
+                        products.map(product=> 
+                        <div className="col-lg-3 col-md-6 mb-3" key={product._id}>
                         
                             <div className="card">
                                     {/* "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" */}
@@ -238,7 +264,7 @@ const Home = (props)=>{
         </footer>
     </div>
     </div>
-    )
+    
 }
 
 export default Home
