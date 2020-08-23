@@ -5,7 +5,7 @@ const listProducts = () => (dispatch) => {
             
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
-        const { data } = axios.get('/api/products')
+        const { data } = await axios.get('/api/products')
         dispatch({type: PRODUCT_LIST_SUCCESS, payload: data})
     }
     catch(error){

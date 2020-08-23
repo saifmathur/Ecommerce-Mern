@@ -29,7 +29,8 @@ const Home = (props)=>{
         }
     },[]);
 
-    return <div className='bg-light vh-100'>
+    return( 
+        <div className='bg-light vh-100'>
         <div className="w-100" style={{ width: "100%" }}>
         
         
@@ -201,8 +202,6 @@ const Home = (props)=>{
                     {/* {loading} ? <div>loading...</div> : 
                     {error} ? <div>{error}</div>:        */}
                     {
-                        {loading}?<div>loading</div>:
-                        {error}?<div>error</div>:
                         //data.products.map(product=> 
                         products.map(product=> 
                         <div className="col-lg-3 col-md-6 mb-3" key={product._id}>
@@ -264,7 +263,7 @@ const Home = (props)=>{
         </footer>
     </div>
     </div>
-    
+    )
 }
 
 export default Home
